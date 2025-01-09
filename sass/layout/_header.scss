@@ -1,0 +1,9 @@
+@use "../foundation/variable";
+
+a {
+  color: green;
+}
+
+h1 {
+  color: variable.$font;
+}
