@@ -1,1 +1,25 @@
-$font: white;
+////////////
+/* カラー */
+////////////
+// メイン
+$color-main: #9ed0e0;
+// サブ
+$color-sub-d-blue: #67b0c7;
+$color-sub-b-gray: #cce1e4;
+$color-sub-l-blue: #e9f6f8;
+// アクセント
+$color-accent-red: #ce2073;
+$color-accent-yellow: #ffee56;
+// モノクロ
+$color-mono-brown: #4a3636;
+$color-mono-d-gray: #cccccc;
+$color-mono-gray: #f5f5f5;
+$color-mono-white: #ffffff;
+
+///////////////////////
+/* フォントファミリー */
+///////////////////////
+$font-family-ja-noto: "Noto Sans JP", serif;
+$font-family-ja-kiwi: "Kiwi Maru", serif;
+$font-family-en-courgette: "Courgette", serif;
+$font-family-en-josefin: "Josefin Sans", serif;

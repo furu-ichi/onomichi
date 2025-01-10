@@ -1,2 +1,150 @@
-@use "../foundation/variable";
+@use "../foundation/variable" as var;
 @use "../foundation/breakpoints";
+
+.header {
+  position: relative;
+  z-index: 100; // 上から降りてくるドロワーメニューより表示優先順位を高める為
+  padding-block: 16px;
+  background-color: var.$color-mono-white;
+
+  @include breakpoints.mq("md") {
+    padding-block: 14px;
+  }
+}
+
+.header__inner {
+  padding-inline: 24px;
+}
+
+.header__content {
+  // ヘッダーメニューを横並び
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__logo {
+  transition: opacity 0.3s;
+
+  a {
+    img {
+      height: 27px; // カンプに合わせた高さに調整
+
+      @include breakpoints.mq("md") {
+        height: 24px;
+      }
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+// ハンバーガーアイコン
+.header__icon {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 24px;
+
+  // クリック時バツアイコンに変更
+  &.is-checked {
+    & .header__icon-bar {
+      // 上の線（左側）
+      &:nth-child(1) {
+        width: 32px;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      // 上の線（右側）
+      &:nth-child(2) {
+        transform: translateX(-5px);
+        width: 0;
+      }
+
+      // 真ん中の線
+      &:nth-child(3) {
+        display: none;
+      }
+
+      // 下の線
+      &:nth-child(4) {
+        width: 32px;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+
+  @include breakpoints.mq("md") {
+    display: none;
+  }
+}
+
+// ハンバーガーアイコンの線1本ずつ
+.header__icon-bar {
+  position: absolute;
+  display: block;
+  background-color: var.$color-mono-brown;
+  border-radius: 10px;
+  height: 3px;
+  transition: transform 0.3s, top 0.3s, width 0.1s;
+
+  // 上の線（左側）
+  &:nth-child(1) {
+    width: 25.6px;
+    top: 0;
+    left: 0;
+  }
+
+  // 上の線（右側）
+  &:nth-child(2) {
+    width: 4.8px;
+    top: 0;
+    right: 0;
+  }
+
+  // 真ん中の線
+  &:nth-child(3) {
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  // 下の線
+  &:nth-child(4) {
+    width: 100%;
+    bottom: 0;
+  }
+}
+
+.header__nav-list {
+  display: none;
+
+  @include breakpoints.mq("md") {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.header__nav-menu {
+  @include breakpoints.mq("md") {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+.header__nav {
+  color: var.$color-mono-brown;
+  font-family: var.$font-family-ja-noto;
+  font-size: 12px;
+}
+
+.header__button {
+}

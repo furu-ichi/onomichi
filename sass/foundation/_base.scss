@@ -1,0 +1,20 @@
+@use "../foundation/variable";
+@use "../foundation/breakpoints";
+
+body {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+
+  &.is-fixed {
+    overflow: hidden;
+  }
+}
+
+.inner {
+  padding-inline: 20px;
+
+  @include breakpoints.mq("md") {
+    padding-inline: 244px;
+  }
+}

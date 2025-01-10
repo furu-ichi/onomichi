@@ -1,0 +1,22 @@
+@use "../foundation/variable" as var;
+
+.button {
+  border-radius: 40px;
+  border: 2px solid var.$color-mono-brown;
+  background: var.$color-mono-white;
+  box-shadow: 0px 4px 0px 0px var.$color-mono-brown;
+  color: var.$color-mono-brown;
+  font-family: var.$font-family-ja-noto;
+  font-weight: 700;
+  transition: background 0.3s;
+
+  // paddingからはborder分のピクセルを引く
+  &.-small {
+    font-size: 14px;
+    padding: calc(6px - 2px) calc(24px - 2px) calc(8px - 2px);
+  }
+
+  &:hover {
+    background: var.$color-accent-yellow;
+  }
+}
