@@ -84,7 +84,8 @@
   max-width: 375px;
 
   @include breakpoints.mq("md") {
-    padding-top: 193.5px;
+    padding-top: 185.5px;
+    padding-bottom: 180.5px;
     max-width: 848px;
   }
 }
@@ -93,6 +94,10 @@
   position: relative;
   height: 154px;
   z-index: 10;
+
+  @include breakpoints.mq("md") {
+    height: 194px;
+  }
 }
 
 .fv-items__head {
@@ -188,6 +193,9 @@
   @include breakpoints.mq("md") {
     margin-top: 16px;
   }
+
+  a {
+  }
 }
 
 .fv-items__image-smartphone {
@@ -216,7 +224,11 @@
 
   @include breakpoints.mq("md") {
     top: 17px;
-    right: 127px;
+    right: clamp(
+      5.625rem,
+      -13.679rem + 40.22vw,
+      7.938rem
+    ); // 最小90px、最大127px（画面幅768px～860px）スマホ画像と重ね合わせる為
   }
 
   img {
@@ -234,8 +246,12 @@
   left: 20px;
 
   @include breakpoints.mq("md") {
-    top: 0;
-    left: 37px;
+    top: 1px;
+    left: clamp(
+      0.938rem,
+      -6.335rem + 15.15vw,
+      2.188rem
+    ); // 最小15px、最大35px（画面幅768px～900px）
   }
 
   img {
@@ -243,31 +259,10 @@
 
     @include breakpoints.mq("md") {
       width: 244px;
+      height: 130px;
     }
   }
 }
-
-// .fv-items__image-cats {
-//   position: absolute;
-//   z-index: 11;
-//   right: 20px;
-//   bottom: 0;
-
-//   @include breakpoints.mq("md") {
-//     right: 0;
-//     bottom: -5px;
-//   }
-
-//   img {
-//     width: 107px;
-//     height: 127px;
-
-//     @include breakpoints.mq("md") {
-//       width: 233px;
-//       height: 294px;
-//     }
-//   }
-// }
 
 .fv-items__image-cat-1 {
   position: absolute;
@@ -318,6 +313,11 @@
   z-index: 11;
   bottom: 0;
   left: 23px; // ピクセルパーフェクトの為
+
+  @include breakpoints.mq("md") {
+    left: 0;
+  }
+
   img {
     width: 86px;
     height: 141px;

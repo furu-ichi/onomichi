@@ -80,7 +80,7 @@
               <a href="#info" class="header__nav link">参加要項</a>
             </div>
             <div class="header__button">
-              <a href="/" class="button -medium">応募してみる</a>
+              <a href="/" class="button -small-2">応募してみる</a>
             </div>
           </nav>
         </div>
@@ -97,7 +97,7 @@
           <a href="#info" class="drawer__nav">参加要項</a>
         </div>
         <div class="drawer__button">
-          <a href="/" class="button -medium">応募してみる</a>
+          <a href="/" class="button -small-2">応募してみる</a>
         </div>
       </nav>
     </div>
@@ -111,7 +111,7 @@
       <!--===========-->
       <!-- FirstView -->
       <!--===========-->
-      <section class="fv">
+      <section id="fv" class="fv">
         <div class="fv__inner">
           <p class="fv__text">
             あなたの見つけたレトロな尾道の一枚を<br />Instagramに投稿しよう
@@ -139,7 +139,13 @@
                 </div>
               </div>
               <div class="fv-items__image-smartphone">
-                <img src="./img/fv/fv-smartphone.png" alt="" />
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="/img/fv/pc/fv-smartphone.png"
+                  />
+                  <img src="/img/fv/fv-smartphone.png" alt="" />
+                </picture>
               </div>
               <div class="fv-items__image-present">
                 <img src="./img/fv/fv-present.png" alt="" />
@@ -164,6 +170,39 @@
       <!--=======-->
       <!-- About -->
       <!--=======-->
+      <section id="about" class="about">
+        <div class="about__inner">
+          <div class="about__box">
+            <!-- 見出し -->
+            <div class="about__heading">
+              <h2 class="heading">
+                <div class="heading__icon"><img src="" alt="" /></div>
+                <p class="heading__en"></p>
+                <p class="heading__ja"></p>
+              </h2>
+              <div class="about__heading-image-1"><img src="" alt="" /></div>
+              <div class="about__heading-image-2"><img src="" alt="" /></div>
+            </div>
+            <!-- 本文 -->
+            <p class="about__title"></p>
+            <p class="about__text-1"></p>
+            <p class="about__text-2"></p>
+            <div class="about__button">
+              <a href="/" class="button -small-2">応募してみる</a>
+            </div>
+            <!-- 周りに配置されている画像 -->
+            <div class="about__image-footprints"><img src="" alt="" /></div>
+            <div class="about__image-right"><img src="" alt="" /></div>
+            <div class="about__image-left"><img src="" alt="" /></div>
+            <div class="about__image-arrow"><img src="" alt="" /></div>
+            <div class="about__image-slope"><img src="" alt="" /></div>
+            <div class="about__image-stone"><img src="" alt="" /></div>
+            <div class="about__image-goods"><img src="" alt="" /></div>
+          </div>
+          <div class="about__logo"><img src="" alt="" /></div>
+          <div class="about__slider"></div>
+        </div>
+      </section>
 
       <!--=======-->
       <!-- Step -->

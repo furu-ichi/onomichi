@@ -1,4 +1,5 @@
 @use "../foundation/variable" as var;
+@use "../foundation/breakpoints";
 
 .button {
   display: inline-block;
@@ -15,10 +16,20 @@
   &.-small {
     font-size: 14px;
     padding: calc(4px - 2px) calc(24px - 2px) calc(6px - 2px);
+
+    @include breakpoints.mq("md") {
+      font-size: 16px;
+      padding: calc(6px - 2px) calc(24px - 2px) calc(8px - 2px);
+    }
+  }
+
+  &.-small-2 {
+    font-size: 14px;
+    padding: calc(6px - 2px) calc(24px - 2px) calc(8px - 2px);
   }
 
   &.-medium {
-    font-size: 14px;
+    font-size: 16px;
     padding: calc(6px - 2px) calc(24px - 2px) calc(8px - 2px);
   }
 
