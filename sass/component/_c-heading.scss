@@ -1,0 +1,45 @@
+@use "../foundation/variable" as var;
+@use "../foundation/breakpoints";
+
+.heading {
+  display: flex;
+  padding-inline: 15px;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.heading__icon {
+  img {
+    width: 37.333px;
+    height: 37.333px;
+  }
+}
+
+.heading__en {
+  color: var.$color-mono-brown;
+  font-family: var.$font-family-en-courgette;
+  font-size: 16px;
+  line-height: 1.25; /* 20px */
+}
+
+.heading__ja {
+  position: relative;
+  padding-bottom: 12px;
+  color: var.$color-mono-brown;
+  font-family: var.$font-family-ja-kiwi;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25; /* 25px */
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: var.$color-accent-yellow;
+    width: 100%;
+    height: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+}

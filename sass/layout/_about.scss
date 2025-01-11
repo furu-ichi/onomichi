@@ -1,0 +1,174 @@
+@use "../foundation/variable" as var;
+@use "../foundation/breakpoints";
+
+.about {
+}
+
+.about__inner {
+  padding-top: 32px;
+  overflow: hidden; // 画像がはみ出してもスクロールバーを表示させない為
+}
+
+.about__container {
+  position: relative; // 画像を絶対配置する為
+  max-width: 335px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 177px;
+}
+
+.about__box {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  padding: 40px 43px;
+  border-radius: 24px;
+  background: var.$color-mono-white;
+}
+
+.about__heading {
+  position: relative;
+}
+
+.about__heading-image-1,
+.about__heading-image-2 {
+  position: absolute;
+  top: 0;
+
+  img {
+    width: 80px;
+  }
+}
+.about__heading-image-1 {
+  left: -19.5px;
+}
+.about__heading-image-2 {
+  right: -32.72px;
+}
+
+.about__title,
+.about__text-1,
+.about__text-2 {
+  color: var.$color-mono-brown;
+  text-align: center;
+  font-family: var.$font-family-ja-noto;
+}
+.about__title {
+  font-size: 14px;
+  font-weight: 700;
+}
+.about__text-1 {
+  font-size: 12px;
+  font-weight: 400;
+}
+.about__text-2 {
+  position: relative;
+  padding-block: 8px;
+  border-bottom: 2px dashed var(--LP-Blue, #9ed0e0);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.about__button {
+}
+
+.about__image-pawpads {
+  position: absolute;
+  z-index: 8;
+  top: -10px;
+  right: -20px;
+  img {
+    width: 54px;
+  }
+}
+
+.about__image-diagonal-line {
+  display: none;
+}
+
+.about__image-right {
+  position: absolute;
+  z-index: 8;
+  top: 273px;
+  right: -160px;
+  img {
+    width: 200px;
+  }
+}
+
+.about__image-left {
+  position: absolute;
+  top: 395px;
+  left: -160px;
+  img {
+    width: 200px;
+  }
+}
+
+.about__image-arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(100%);
+  img {
+    width: 100px;
+  }
+}
+
+.about__image-slope {
+  position: absolute;
+  z-index: 8;
+  bottom: 0;
+  transform: translateY(100%);
+  left: -20px;
+  img {
+    width: 138px;
+  }
+}
+
+.about__image-stone {
+  position: absolute;
+  right: 0;
+  bottom: -11.67px;
+  transform: translateY(100%);
+  img {
+    width: 48px;
+  }
+}
+
+.about__image-wavyline-1 {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.about__image-wavyline-2 {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.about__image-goods {
+  position: absolute;
+  right: 37px;
+  bottom: -53.67px;
+  transform: translateY(100%);
+  img {
+    width: 133px;
+  }
+}
+
+.about__logo {
+  position: absolute;
+  z-index: 9;
+  left: 50%;
+  bottom: -139.67px;
+  transform: translateX(-50%) translateY(100%);
+  width: 355px;
+}
+
+.about__slider {
+}

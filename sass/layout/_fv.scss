@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
-  background-color: var.$color-sub-l-blue;
+  // background-color: var.$color-sub-l-blue;
   padding-top: 19px; // マージンの相殺を防ぐ為、fv__textクラスのmargin-topでは指定しない
 
   @include breakpoints.mq("md") {
@@ -249,9 +249,9 @@
     top: 1px;
     left: clamp(
       0.938rem,
-      -6.335rem + 15.15vw,
+      -9.497rem + 21.74vw,
       2.188rem
-    ); // 最小15px、最大35px（画面幅768px～900px）
+    ); // 最小15px、最大35px（画面幅768px～860px）
   }
 
   img {

@@ -1,10 +1,11 @@
-@use "../foundation/variable";
+@use "../foundation/variable" as var;
 @use "../foundation/breakpoints";
 
 body {
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
+  background-color: var.$color-sub-l-blue;
 
   &.is-fixed {
     overflow: hidden;
