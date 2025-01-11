@@ -3,7 +3,7 @@
 
 .drawer {
   position: fixed;
-  z-index: 99;
+  z-index: 19; // ヘッダーより優先度を下げる（上部からドロワーメニューが降りてくる為）
   background: var.$color-mono-white;
   bottom: 0;
   width: 100%;

@@ -1,0 +1,330 @@
+@use "../foundation/variable" as var;
+@use "../foundation/breakpoints";
+
+.fv {
+  background-image: url(../../img/fv/fv-bg.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  background-color: var.$color-sub-l-blue;
+  padding-top: 19px; // マージンの相殺を防ぐ為、fv__textクラスのmargin-topでは指定しない
+
+  @include breakpoints.mq("md") {
+    background-image: url(../../img/fv/pc/fv-bg.png);
+    background-size: 1512px 740px;
+    padding-top: 35px;
+    padding-bottom: 98px;
+  }
+}
+
+.fv__inner {
+}
+
+.fv__text {
+  color: var.$color-mono-brown;
+  font-family: var.$font-family-ja-kiwi;
+  font-size: 14px;
+  line-height: 1.25; /* 17.5px */
+  text-align: center;
+  text-shadow: 0px 0px 30px var.$color-mono-white;
+
+  @include breakpoints.mq("md") {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.fv__heading {
+  text-align: center;
+  margin-top: 20px;
+
+  @include breakpoints.mq("md") {
+    margin-top: 24px;
+  }
+}
+
+.fv__heading-image-1 {
+  img {
+    width: 334px;
+
+    @include breakpoints.mq("md") {
+      width: 520px;
+    }
+  }
+}
+
+.fv__heading-image-2 {
+  margin-top: 12px;
+
+  @include breakpoints.mq("md") {
+    margin-top: 16px;
+  }
+
+  img {
+    width: 240px;
+
+    @include breakpoints.mq("md") {
+      width: 356px;
+    }
+  }
+}
+
+.fv__content {
+}
+
+.fv-items {
+}
+
+.fv__container {
+  position: relative;
+  padding-top: 235.6px;
+  padding-bottom: 142.4px;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 375px;
+
+  @include breakpoints.mq("md") {
+    padding-top: 193.5px;
+    max-width: 848px;
+  }
+}
+
+.fv__box {
+  position: relative;
+  height: 154px;
+  z-index: 10;
+}
+
+.fv-items__head {
+  width: 160px;
+  margin: 0 auto;
+
+  @include breakpoints.mq("md") {
+    width: 200px;
+  }
+}
+
+.fv-items__head-text {
+  display: inline-block;
+  padding: 6.4px 18.5px;
+  border-radius: 12.8px 12.8px 0 0;
+  background: linear-gradient(
+    265deg,
+    #ac3790 -3.52%,
+    #d65a5c 44.94%,
+    #f4c06d 92.38%
+  );
+  color: var.$color-mono-white;
+  font-feature-settings: "pref" on;
+  font-family: var.$font-family-ja-noto;
+  font-size: 12.8px;
+  font-weight: 700;
+
+  @include breakpoints.mq("md") {
+    padding: 8px 23px;
+    font-size: 16px;
+  }
+}
+
+.fv-items__body {
+  padding-top: 12.8px;
+  padding-bottom: 19.2px;
+  width: 160px;
+  margin: 0 auto;
+  border-radius: 0 0 12.8px 12.8px;
+  background: var.$color-mono-white;
+
+  @include breakpoints.mq("md") {
+    width: 200px;
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+}
+
+.fv-items__body-text-1 {
+  position: relative;
+  color: var.$color-mono-brown;
+  font-family: var.$font-family-ja-noto;
+  font-size: 12px;
+
+  @include breakpoints.mq("md") {
+    font-size: 14px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: var.$color-accent-red;
+    width: 48px;
+    height: 2.4px;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include breakpoints.mq("md") {
+      width: 56px;
+      height: 3px;
+    }
+  }
+}
+
+.fv-items__body-text-2 {
+  margin-top: 6.4px;
+  color: var.$color-mono-brown;
+  font-feature-settings: "pref" on;
+  font-family: var.$font-family-ja-noto;
+  font-size: 12px;
+  font-weight: 700;
+
+  @include breakpoints.mq("md") {
+    margin-top: 8px;
+    font-size: 16px;
+  }
+}
+
+.fv-items__button {
+  margin-top: 11.8px; // ピクセルパーフェクトの為
+
+  @include breakpoints.mq("md") {
+    margin-top: 16px;
+  }
+}
+
+.fv-items__image-smartphone {
+  position: absolute;
+  z-index: 9;
+  top: 113px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include breakpoints.mq("md") {
+    top: 33px;
+  }
+
+  width: 200px;
+
+  @include breakpoints.mq("md") {
+    width: 250px;
+  }
+}
+
+.fv-items__image-present {
+  position: absolute;
+  z-index: 8;
+  top: 10px;
+  right: 45px;
+
+  @include breakpoints.mq("md") {
+    top: 17px;
+    right: 127px;
+  }
+
+  img {
+    width: 110px;
+
+    @include breakpoints.mq("md") {
+      width: 180px;
+    }
+  }
+}
+
+.fv-items__image-fukidashi {
+  position: absolute;
+  top: 17px;
+  left: 20px;
+
+  @include breakpoints.mq("md") {
+    top: 0;
+    left: 37px;
+  }
+
+  img {
+    width: 142px;
+
+    @include breakpoints.mq("md") {
+      width: 244px;
+    }
+  }
+}
+
+// .fv-items__image-cats {
+//   position: absolute;
+//   z-index: 11;
+//   right: 20px;
+//   bottom: 0;
+
+//   @include breakpoints.mq("md") {
+//     right: 0;
+//     bottom: -5px;
+//   }
+
+//   img {
+//     width: 107px;
+//     height: 127px;
+
+//     @include breakpoints.mq("md") {
+//       width: 233px;
+//       height: 294px;
+//     }
+//   }
+// }
+
+.fv-items__image-cat-1 {
+  position: absolute;
+  z-index: 13;
+  right: 29px;
+  bottom: 0;
+
+  @include breakpoints.mq("md") {
+    right: 0;
+    bottom: -43px;
+  }
+
+  img {
+    width: 98px;
+    height: 72px;
+
+    @include breakpoints.mq("md") {
+      width: 233px;
+      height: 174px;
+    }
+  }
+}
+
+.fv-items__image-cat-2 {
+  position: absolute;
+  z-index: 12;
+  right: 20px;
+  bottom: 58px;
+
+  @include breakpoints.mq("md") {
+    right: 63px;
+    bottom: 61px;
+  }
+
+  img {
+    width: 62px;
+    height: 69px;
+
+    @include breakpoints.mq("md") {
+      width: 170px;
+      height: 190px;
+    }
+  }
+}
+
+.fv-items__image-food {
+  position: absolute;
+  z-index: 11;
+  bottom: 0;
+  left: 23px; // ピクセルパーフェクトの為
+  img {
+    width: 86px;
+    height: 141px;
+
+    @include breakpoints.mq("md") {
+      width: 202px;
+      height: 332px;
+    }
+  }
+}

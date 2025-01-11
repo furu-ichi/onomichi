@@ -3,8 +3,8 @@
 
 .header {
   position: relative;
-  z-index: 100; // 上から降りてくるドロワーメニューより表示優先順位を高める為
-  padding-block: 16px;
+  z-index: 20; // 上から降りてくるドロワーメニューより表示優先順位を高める為
+  padding-block: calc(16px + 2px); // ピクセルパーフェクトの為
   background-color: var.$color-mono-white;
 
   @include breakpoints.mq("md") {
@@ -13,27 +13,28 @@
 }
 
 .header__inner {
-  padding-inline: 24px;
+  padding-inline: 20px;
+
+  @include breakpoints.mq("md") {
+    padding-inline: 24px;
+  }
 }
 
 .header__content {
   // ヘッダーメニューを横並び
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 }
 
 .header__logo {
   transition: opacity 0.3s;
+  width: 210px;
+  height: 27px;
 
-  a {
-    img {
-      height: 27px; // カンプに合わせた高さに調整
-
-      @include breakpoints.mq("md") {
-        height: 24px;
-      }
-    }
+  @include breakpoints.mq("md") {
+    height: 24px;
   }
 
   &:hover {
@@ -46,7 +47,7 @@
   position: relative;
   display: inline-block;
   width: 32px;
-  height: 24px;
+  height: calc(24px + 3px); // ピクセルパーフェクトの為
 
   // クリック時バツアイコンに変更
   &.is-checked {

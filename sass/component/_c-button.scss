@@ -1,6 +1,7 @@
 @use "../foundation/variable" as var;
 
 .button {
+  display: inline-block;
   border-radius: 40px;
   border: 2px solid var.$color-mono-brown;
   background: var.$color-mono-white;
@@ -12,6 +13,11 @@
 
   // paddingからはborder分のピクセルを引く
   &.-small {
+    font-size: 14px;
+    padding: calc(4px - 2px) calc(24px - 2px) calc(6px - 2px);
+  }
+
+  &.-medium {
     font-size: 14px;
     padding: calc(6px - 2px) calc(24px - 2px) calc(8px - 2px);
   }
