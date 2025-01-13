@@ -1,11 +1,13 @@
 @use "sass:map";
 
+$breakpoint-xs: 375px;
 $breakpoint-sm: 600px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 900px;
 $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1300px;
 $breakpoints: (
+  "xs": "not  screen and (min-width: #{$breakpoint-xs})",
   "sm": "screen and (min-width: #{$breakpoint-sm})",
   "md": "screen and (min-width: #{$breakpoint-md})",
   "not-md": "not screen and (min-width: #{$breakpoint-md})",

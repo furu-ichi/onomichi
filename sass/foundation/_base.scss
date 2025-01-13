@@ -16,6 +16,6 @@ body {
   padding-inline: 20px;
 
   @include breakpoints.mq("md") {
-    padding-inline: 244px;
+    // padding-inline: 244px;
   }
 }
