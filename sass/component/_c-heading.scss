@@ -7,12 +7,22 @@
   flex-direction: column;
   gap: 6px;
   align-items: center;
+
+  @include breakpoints.mq("md") {
+    padding-inline: 20px;
+    gap: 8px;
+  }
 }
 
 .heading__icon {
   img {
     width: 37.333px;
     height: 37.333px;
+
+    @include breakpoints.mq("md") {
+      width: 48px;
+      height: 48px;
+    }
   }
 }
 
@@ -21,6 +31,10 @@
   font-family: var.$font-family-en-courgette;
   font-size: 16px;
   line-height: 1.25; /* 20px */
+
+  @include breakpoints.mq("md") {
+    font-size: 20px;
+  }
 }
 
 .heading__ja {
@@ -31,6 +45,12 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 1.25; /* 25px */
+
+  @include breakpoints.mq("md") {
+    padding-bottom: 16px;
+    font-feature-settings: "pwid" on;
+    font-size: 32px;
+  }
 
   &::after {
     content: "";

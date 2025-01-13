@@ -6,7 +6,12 @@
 
 .about__inner {
   padding-top: 32px;
+  padding-bottom: 32px;
   overflow: hidden; // 画像がはみ出してもスクロールバーを表示させない為
+  @include breakpoints.mq("md") {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
 }
 
 .about__container {
@@ -15,6 +20,12 @@
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 177px;
+
+  @include breakpoints.mq("md") {
+    max-width: calc(848px + 20px * 2);
+    margin-bottom: 258px;
+    padding-inline: 20px;
+  }
 }
 
 .about__box {
@@ -22,11 +33,17 @@
   z-index: 10;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: calc(24px - 1px); // ピクセルパーフェクトの為
   align-items: center;
   padding: 40px 43px;
   border-radius: 24px;
   background: var.$color-mono-white;
+
+  @include breakpoints.mq("md") {
+    gap: calc(32px + 1px); // ピクセルパーフェクトの為
+    padding-inline: 114px;
+    border-radius: 40px;
+  }
 }
 
 .about__heading {
@@ -36,17 +53,30 @@
 .about__heading-image-1,
 .about__heading-image-2 {
   position: absolute;
-  top: 0;
-
   img {
-    width: 80px;
+    width: 90px;
+    @include breakpoints.mq("md") {
+      width: 145px;
+    }
   }
 }
 .about__heading-image-1 {
-  left: -19.5px;
+  top: -10px;
+  left: -21px;
+  @include breakpoints.mq("md") {
+    top: -1px;
+    left: -12.39px;
+    transform: translateX(-100%);
+  }
 }
 .about__heading-image-2 {
-  right: -32.72px;
+  top: -10px;
+  right: -34px;
+  @include breakpoints.mq("md") {
+    top: 7px;
+    right: -14.08px;
+    transform: translateX(100%);
+  }
 }
 
 .about__title,
@@ -59,53 +89,34 @@
 .about__title {
   font-size: 14px;
   font-weight: 700;
+  @include breakpoints.mq("md") {
+    font-feature-settings: "pref" on;
+    font-size: 16px;
+  }
 }
 .about__text-1 {
   font-size: 12px;
   font-weight: 400;
+  @include breakpoints.mq("md") {
+    font-size: 16px;
+  }
+  & .-bold {
+    font-weight: 700;
+  }
 }
 .about__text-2 {
   position: relative;
-  padding-block: 8px;
+  padding-block: calc(8px - 1px); // ピクセルパーフェクトの為
   border-bottom: 2px dashed var(--LP-Blue, #9ed0e0);
   font-size: 14px;
   font-weight: 700;
+  @include breakpoints.mq("md") {
+    padding-block: 12px;
+    font-size: 20px;
+  }
 }
 
 .about__button {
-}
-
-.about__image-pawpads {
-  position: absolute;
-  z-index: 8;
-  top: -10px;
-  right: -20px;
-  img {
-    width: 54px;
-  }
-}
-
-.about__image-diagonal-line {
-  display: none;
-}
-
-.about__image-right {
-  position: absolute;
-  z-index: 8;
-  top: 273px;
-  right: -160px;
-  img {
-    width: 200px;
-  }
-}
-
-.about__image-left {
-  position: absolute;
-  top: 395px;
-  left: -160px;
-  img {
-    width: 200px;
-  }
 }
 
 .about__image-arrow {
@@ -115,6 +126,83 @@
   transform: translateX(-50%) translateY(100%);
   img {
     width: 100px;
+    @include breakpoints.mq("md") {
+      width: 140px;
+    }
+  }
+}
+
+.about__image-pawpads {
+  position: absolute;
+  z-index: 8;
+  top: -10px;
+  right: -20px;
+  @include breakpoints.mq("md") {
+    top: -80px;
+    right: -46px;
+    transform: translateX(100%);
+  }
+  img {
+    width: 54px;
+    @include breakpoints.mq("md") {
+      width: 100px;
+    }
+  }
+}
+
+.about__image-diagonal-line {
+  display: none;
+  @include breakpoints.mq("md") {
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: -83px;
+    transform: translateX(-100%);
+    img {
+      width: 250px;
+    }
+  }
+}
+
+.about__image-right {
+  position: absolute;
+  z-index: 8;
+  top: 273px;
+  right: -160px;
+  @include breakpoints.mq("md") {
+    top: 73.07px;
+    right: 55px;
+    transform: translateX(100%);
+  }
+  @include breakpoints.mq("xxl") {
+    right: -116px;
+  }
+  img {
+    width: 200px;
+    @include breakpoints.mq("md") {
+      width: 480px;
+    }
+  }
+}
+
+.about__image-left {
+  position: absolute;
+  top: 395px;
+  left: -160px;
+  @include breakpoints.mq("md") {
+    z-index: 9;
+    top: 74px;
+    left: 60px;
+    transform: translateX(-100%);
+  }
+  @include breakpoints.mq("xxl") {
+    left: -170px;
+  }
+  img {
+    width: 200px;
+    @include breakpoints.mq("md") {
+      width: 480px;
+    }
   }
 }
 
@@ -124,8 +212,19 @@
   bottom: 0;
   transform: translateY(100%);
   left: -20px;
+  @include breakpoints.mq("md") {
+    left: 212px;
+    transform: translateX(-100%);
+    bottom: -309px;
+  }
+  @include breakpoints.mq("xxl") {
+    left: 12px;
+  }
   img {
     width: 138px;
+    @include breakpoints.mq("md") {
+      width: 427px;
+    }
   }
 }
 
@@ -134,21 +233,49 @@
   right: 0;
   bottom: -11.67px;
   transform: translateY(100%);
+  @include breakpoints.mq("md") {
+    right: 120px;
+    bottom: -146px;
+    transform: translateX(100%) translateY(0);
+    z-index: 9;
+  }
+  @include breakpoints.mq("xxl") {
+    right: -61px;
+    bottom: 127.63px;
+  }
   img {
     width: 48px;
+    @include breakpoints.mq("md") {
+      width: 101px;
+    }
   }
 }
 
-.about__image-wavyline-1 {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-}
-
+.about__image-wavyline-1,
 .about__image-wavyline-2 {
-  position: absolute;
-  top: 0;
-  z-index: 1;
+  display: none;
+  @include breakpoints.mq("md") {
+    display: block;
+    position: absolute;
+    img {
+      width: 807px;
+      height: 12px;
+    }
+  }
+}
+.about__image-wavyline-1 {
+  @include breakpoints.mq("md") {
+    right: -71px;
+    transform: translateX(100%);
+    bottom: 201px;
+  }
+}
+.about__image-wavyline-2 {
+  @include breakpoints.mq("md") {
+    right: -3px;
+    transform: translateX(100%);
+    bottom: 168px;
+  }
 }
 
 .about__image-goods {
@@ -156,19 +283,61 @@
   right: 37px;
   bottom: -53.67px;
   transform: translateY(100%);
+  @include breakpoints.mq("md") {
+    right: 10px;
+    bottom: -115px;
+    transform: translateY(0);
+  }
+  @include breakpoints.mq("xxl") {
+    right: -237px;
+    bottom: -79px;
+  }
   img {
     width: 133px;
+    @include breakpoints.mq("md") {
+      width: 308px;
+    }
   }
 }
 
 .about__logo {
   position: absolute;
   z-index: 9;
+  width: 355px;
   left: 50%;
   bottom: -139.67px;
   transform: translateX(-50%) translateY(100%);
-  width: 355px;
+  @include breakpoints.mq("md") {
+    width: 891px;
+    bottom: -167px;
+  }
 }
 
 .about__slider {
+  position: relative;
+  z-index: 20;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.about__swiper {
+}
+
+.about__wrapper {
+  transition-timing-function: linear;
+}
+
+.about__slide {
+  width: auto !important;
+  overflow: hidden;
+  img {
+    width: 100px;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
+    @include breakpoints.mq("md") {
+      width: 200px;
+    }
+  }
 }

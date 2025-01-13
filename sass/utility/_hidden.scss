@@ -1,0 +1,31 @@
+@use "../foundation/breakpoints";
+
+.sm-hidden {
+  @include breakpoints.mq("sm") {
+    display: none;
+  }
+}
+
+.md-hidden {
+  @include breakpoints.mq("md") {
+    display: none;
+  }
+}
+
+.lg-hidden {
+  @include breakpoints.mq("lg") {
+    display: none;
+  }
+}
+
+.xl-hidden {
+  @include breakpoints.mq("xl") {
+    display: none;
+  }
+}
+
+.not-md-hidden {
+  @include breakpoints.mq("not-md") {
+    display: none;
+  }
+}

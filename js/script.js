@@ -20,20 +20,17 @@ $(".drawer__nav").on("click", function (e) {
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   loop: true,
+  autoplay: {
+    delay: 0,
+  }, // 自動で流れる設定
+  speed: 5000, // 自動で流れるスピード
+  slidesPerView: "auto", // 画面幅に合わせて枚数を自動調整
+  spaceBetween: 10, // スライド間の空白
+  allowTouchMove: false, // ドラッグ、スワイプでの操作無効
 
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
+  breakpoints: {
+    768: {
+      spaceBetween: 20, // スライド間の空白
+    },
   },
 });

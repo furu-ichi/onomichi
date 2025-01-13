@@ -31,6 +31,11 @@
   &.-medium {
     font-size: 16px;
     padding: calc(6px - 2px) calc(24px - 2px) calc(8px - 2px);
+
+    @include breakpoints.mq("md") {
+      font-size: 20px;
+      padding: calc(10px - 2px) calc(40px - 2px) calc(12px - 2px);
+    }
   }
 
   &:hover {

@@ -1,10 +1,11 @@
 @use "../foundation/variable" as var;
+@use "../foundation/breakpoints";
 
 .link {
   position: relative;
   transition: color 0.3s;
 
-  // ホバー時の下線
+  // ホバー時の下線（デフォルトはアンダーラインなし）
   &::after {
     content: "";
     position: absolute;
@@ -17,10 +18,27 @@
     transition: opacity 0.3s;
   }
 
+  // ホバー時に色変化 かつ アンダーラインあり
   &:hover {
     color: var.$color-sub-d-blue;
     &::after {
       opacity: 1;
+    }
+  }
+
+  // デフォルトでアンダーラインあり
+  &.-underline {
+    &::after {
+      background-color: var.$color-mono-brown;
+      opacity: 1;
+      transition: background-color 0.3s;
+    }
+
+    // アンダーラインの色変更
+    &:hover {
+      &::after {
+        background-color: var.$color-sub-d-blue;
+      }
     }
   }
 }
