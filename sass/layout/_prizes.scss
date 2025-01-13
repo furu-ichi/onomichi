@@ -1,0 +1,147 @@
+@use "../foundation/variable" as var;
+@use "../foundation/breakpoints";
+
+.prizes {
+  padding-top: 37.67px;
+  padding-bottom: 500px;
+}
+
+.prizes__inner {
+}
+
+.prizes__container {
+  position: relative;
+}
+
+.prizes__heading {
+  position: absolute;
+  z-index: 1;
+  top: -63px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  & .heading {
+    padding-inline: 13px;
+  }
+}
+
+.prizes__heading-bg {
+  position: absolute;
+  z-index: -1;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 237px;
+}
+
+.prizes__content {
+  margin-top: 63px;
+  padding-top: 59px;
+  padding-bottom: 35px;
+  border-radius: 24px;
+  background: var.$color-mono-white;
+}
+
+.prizes__text {
+  color: var.$color-mono-brown;
+  font-family: var.$font-family-ja-noto;
+  text-align: center;
+  font-size: 12px;
+}
+
+.prizes__boxes {
+  margin-top: 24px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.prizes__box {
+}
+
+.prizes-box {
+  position: relative;
+  padding-top: 24px;
+  max-width: 160px;
+
+  &:nth-child(5) {
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+  }
+}
+
+.prizes-box__icon {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.prizes-box__icon-bg {
+  img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.prizes-box__icon-text,
+.prizes-box__icon-num {
+  position: absolute;
+  display: inline-block;
+  color: var.$color-mono-white;
+  text-align: center;
+  font-weight: 700;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.prizes-box__icon-text {
+  top: 5.76px;
+  font-family: var.$font-family-ja-noto;
+  font-size: 7.68px;
+}
+
+.prizes-box__icon-num {
+  top: 19.36px;
+  font-family: var.$font-family-en-josefin;
+  font-size: 23.04px;
+  line-height: 1; /* 23.04px */
+}
+
+.prizes-box__image {
+  img {
+    width: 160px;
+    height: 140px;
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+.prizes-box__image-text {
+  padding: 9px 38px;
+  color: var.$color-mono-brown;
+  text-align: center;
+  font-family: var.$font-family-ja-noto;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 0 0 8px 8px;
+  background: var.$color-mono-gray;
+}
+
+.prizes-box__zoom-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  img {
+    border-radius: 0 0 8px 0;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.prizes__button {
+  margin-top: 24px;
+}
