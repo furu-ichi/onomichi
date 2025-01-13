@@ -1595,6 +1595,56 @@ body.is-fixed {
   margin-top: 24px;
 }
 
+.prizes-modal {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
+  padding: 0;
+  margin: auto;
+  max-width: 336px;
+  min-height: 480px;
+  border: none;
+  overscroll-behavior-y: none;
+}
+.prizes-modal::-ms-backdrop {
+  opacity: 0.7;
+  background: #000;
+}
+.prizes-modal::backdrop {
+  opacity: 0.7;
+  background: #000;
+}
+
+.prizes-modal__image img {
+  border-radius: 24px 24px 0 0;
+  width: 336px;
+  height: 210px;
+}
+
+.prizes-modal__title {
+  margin-top: 18px;
+  color: #4a3636;
+  -webkit-font-feature-settings: "pref" on;
+          font-feature-settings: "pref" on;
+  font-family: "Noto Sans JP", serif;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.prizes-modal__text {
+  margin-top: 12px;
+  color: #000;
+  font-family: "Noto Sans JP", serif;
+  text-align: center;
+  font-size: 12px;
+}
+
+.prizes-modal__button {
+  margin-top: 16px;
+  text-align: center;
+}
+
 .button {
   display: inline-block;
   border-radius: 40px;

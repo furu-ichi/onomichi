@@ -34,3 +34,21 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+
+// モーダルを開く
+$(".prizes__button").on("click", function (e) {
+  e.preventDefault();
+
+  $("#js-prizes-modal")[0].showModal();
+  $("body").toggleClass("is-fixed");
+
+  // 後ろの要素が選択できない
+  // $("#js-about-modal")[0].show();
+});
+
+// モーダルを閉じる
+$(".js-modal-close").on("click", function (e) {
+  e.preventDefault();
+
+  $("#js-about-modal")[0].close();
+});
