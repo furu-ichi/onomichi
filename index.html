@@ -535,20 +535,35 @@
                 <p class="heading__ja">キャンペーン特典</p>
               </h2>
               <div class="prizes__heading-bg">
-                <img
-                  src="./img/prizes/prizes-heading-bg.png"
-                  alt="キャンペーン特典ページ見出しの背景"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./img/prizes/pc/prizes-heading-bg.png"
+                  />
+                  <img
+                    src="./img/prizes/prizes-heading-bg.png"
+                    alt="キャンペーン特典ページ見出しの背景"
+                  />
+                </picture>
+              </div>
+              <div class="prizes__heading-side-1">
+                <img src="./img/prizes/prizes-heading-side.png" alt="" />
+              </div>
+              <div class="prizes__heading-side-2">
+                <img src="./img/prizes/prizes-heading-side.png" alt="" />
               </div>
             </div>
             <!-- メイン -->
             <div class="prizes__content inner">
               <p class="prizes__text">
-                キャンペーンにご参加いただたい方の中から100名様に、尾道で人気のお土産セットやオリジナルグッズをプレゼント！
+                キャンペーンにご参加いただたい方の中から100名様に、尾道で人気の<span
+                  class="inline-block"
+                  >お土産セットやオリジナルグッズをプレゼント！</span
+                >
               </p>
               <div class="prizes__boxes">
                 <!-- 特典1 -->
-                <div class="prizes__box prizes-box">
+                <button class="prizes__box prizes-box js-prizes-box">
                   <div class="prizes-box__icon">
                     <div class="prizes-box__icon-bg">
                       <img
@@ -560,10 +575,16 @@
                     <p class="prizes-box__icon-num">1</p>
                   </div>
                   <div class="prizes-box__image">
-                    <img
-                      src="./img/prizes/prizes-image-01.jpg"
-                      alt="海街洋菓子店スイーツセット"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="./img/prizes/pc/prizes-image-01.jpg"
+                      />
+                      <img
+                        src="./img/prizes/prizes-image-01.jpg"
+                        alt="海街洋菓子店スイーツセット"
+                      />
+                    </picture>
                   </div>
                   <p class="prizes-box__image-text">
                     海街洋菓子店<br />スイーツセット
@@ -574,9 +595,9 @@
                       alt="拡大表示アイコン"
                     />
                   </div>
-                </div>
+                </button>
                 <!-- 特典2 -->
-                <div class="prizes__box prizes-box">
+                <button class="prizes__box prizes-box js-prizes-box">
                   <div class="prizes-box__icon">
                     <div class="prizes-box__icon-bg">
                       <img
@@ -588,13 +609,16 @@
                     <p class="prizes-box__icon-num">2</p>
                   </div>
                   <div class="prizes-box__image">
-                    <img
-                      src="./img/prizes/prizes-image-01.jpg"
-                      alt="海街洋菓子店スイーツセット"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="./img/prizes/pc/prizes-image-02.jpg"
+                      />
+                      <img src="./img/prizes/prizes-image-02.jpg" alt="" />
+                    </picture>
                   </div>
                   <p class="prizes-box__image-text">
-                    海街洋菓子店<br />スイーツセット
+                    ねこねこ<br class="md-hidden" />グッズセット
                   </p>
                   <div class="prizes-box__zoom-icon">
                     <img
@@ -602,9 +626,9 @@
                       alt="拡大表示アイコン"
                     />
                   </div>
-                </div>
+                </button>
                 <!-- 特典3 -->
-                <div class="prizes__box prizes-box">
+                <button class="prizes__box prizes-box js-prizes-box">
                   <div class="prizes-box__icon">
                     <div class="prizes-box__icon-bg">
                       <img
@@ -616,23 +640,24 @@
                     <p class="prizes-box__icon-num">3</p>
                   </div>
                   <div class="prizes-box__image">
-                    <img
-                      src="./img/prizes/prizes-image-01.jpg"
-                      alt="海街洋菓子店スイーツセット"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="./img/prizes/pc/prizes-image-03.jpg"
+                      />
+                      <img src="./img/prizes/prizes-image-03.jpg" alt="" />
+                    </picture>
                   </div>
-                  <p class="prizes-box__image-text">
-                    海街洋菓子店<br />スイーツセット
-                  </p>
+                  <p class="prizes-box__image-text">尾道ラーメンセット</p>
                   <div class="prizes-box__zoom-icon">
                     <img
                       src="./img/prizes/prizes-zoom-icon.png"
                       alt="拡大表示アイコン"
                     />
                   </div>
-                </div>
+                </button>
                 <!-- 特典4 -->
-                <div class="prizes__box prizes-box">
+                <button class="prizes__box prizes-box js-prizes-box">
                   <div class="prizes-box__icon">
                     <div class="prizes-box__icon-bg">
                       <img
@@ -644,13 +669,16 @@
                     <p class="prizes-box__icon-num">4</p>
                   </div>
                   <div class="prizes-box__image">
-                    <img
-                      src="./img/prizes/prizes-image-01.jpg"
-                      alt="海街洋菓子店スイーツセット"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="./img/prizes/pc/prizes-image-04.jpg"
+                      />
+                      <img src="./img/prizes/prizes-image-04.jpg" alt="" />
+                    </picture>
                   </div>
                   <p class="prizes-box__image-text">
-                    海街洋菓子店<br />スイーツセット
+                    おうちで<br />喫茶店セット
                   </p>
                   <div class="prizes-box__zoom-icon">
                     <img
@@ -658,9 +686,9 @@
                       alt="拡大表示アイコン"
                     />
                   </div>
-                </div>
+                </button>
                 <!-- 特典5 -->
-                <div class="prizes__box prizes-box">
+                <button class="prizes__box prizes-box js-prizes-box">
                   <div class="prizes-box__icon">
                     <div class="prizes-box__icon-bg">
                       <img
@@ -672,13 +700,16 @@
                     <p class="prizes-box__icon-num">5</p>
                   </div>
                   <div class="prizes-box__image">
-                    <img
-                      src="./img/prizes/prizes-image-01.jpg"
-                      alt="海街洋菓子店スイーツセット"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="./img/prizes/pc/prizes-image-05.jpg"
+                      />
+                      <img src="./img/prizes/prizes-image-05.jpg" alt="" />
+                    </picture>
                   </div>
                   <p class="prizes-box__image-text">
-                    海街洋菓子店<br />スイーツセット
+                    工房尾道帆布<br />オリジナルトート
                   </p>
                   <div class="prizes-box__zoom-icon">
                     <img
@@ -686,7 +717,7 @@
                       alt="拡大表示アイコン"
                     />
                   </div>
-                </div>
+                </button>
               </div>
               <!-- ボタン -->
               <div class="prizes__button">
@@ -701,16 +732,89 @@
       </section>
 
       <!-- モーダル画面 -->
-      <dialog id="js-prizes-modal" class="prizes-modal">
-        <div class="prizes-modal__image">
-          <img src="./img/prizes/prizes-modal-image-01.jpg" alt="" />
+      <!-- 特典1 -->
+      <dialog class="prizes-modal js-prizes-modal">
+        <div class="prizes-modal__container">
+          <div class="prizes-modal__image">
+            <img src="./img/prizes/prizes-modal-image-01.jpg" alt="" />
+          </div>
+          <p class="prizes-modal__title">海街洋菓子店 スイーツセット</p>
+          <p class="prizes-modal__text">
+            海沿いにあるケーキ屋さん、<br />海街洋菓子店の人気焼き菓子詰め合わせセット。<br />こだわりのバターをふんだんに使ったリッチな味わい<br />で、濃厚なコクが後を引く美味しさです。
+          </p>
+          <div class="prizes-modal__button">
+            <button class="button -medium js-prizes-modal-button">
+              閉じる
+            </button>
+          </div>
         </div>
-        <p class="prizes-modal__title">海街洋菓子店 スイーツセット</p>
-        <p class="prizes-modal__text">
-          海沿いにあるケーキ屋さん、<br />海街洋菓子店の人気焼き菓子詰め合わせセット。<br />こだわりのバターをふんだんに使ったリッチな味わい<br />で、濃厚なコクが後を引く美味しさです。
-        </p>
-        <div class="prizes-modal__button">
-          <a href="https://www.instagram.com/" class="button -medium">閉じる</a>
+      </dialog>
+      <!-- 特典2 -->
+      <dialog class="prizes-modal js-prizes-modal">
+        <div class="prizes-modal__container">
+          <div class="prizes-modal__image">
+            <img src="./img/prizes/prizes-modal-image-02.jpg" alt="" />
+          </div>
+          <p class="prizes-modal__title">ねこねこグッズセット</p>
+          <p class="prizes-modal__text">
+            お土産としても大人気の猫グッズを集めました。<br />お家で、オフィスで、<br />眺めているだけでも癒されてしまう<br />愛らしい猫たちと一緒に。
+          </p>
+          <div class="prizes-modal__button">
+            <button class="button -medium js-prizes-modal-button">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </dialog>
+      <!-- 特典3 -->
+      <dialog class="prizes-modal js-prizes-modal">
+        <div class="prizes-modal__container">
+          <div class="prizes-modal__image">
+            <img src="./img/prizes/prizes-modal-image-03.jpg" alt="" />
+          </div>
+          <p class="prizes-modal__title">尾道ラーメンセット</p>
+          <p class="prizes-modal__text">
+            全国にファンがいる本格的な尾道ラーメンをお家で。<br />尾道ラーメンといえば、透き通った醤油スープと、<br />平打ち麺が特徴です。<br />コクがありながらまろやかな味のスープは<br />思わず飲み干したくなるお味。
+          </p>
+          <div class="prizes-modal__button">
+            <button class="button -medium js-prizes-modal-button">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </dialog>
+      <!-- 特典4 -->
+      <dialog class="prizes-modal js-prizes-modal">
+        <div class="prizes-modal__container">
+          <div class="prizes-modal__image">
+            <img src="./img/prizes/prizes-modal-image-04.jpg" alt="" />
+          </div>
+          <p class="prizes-modal__title">おうちで喫茶店セット</p>
+          <p class="prizes-modal__text">
+            尾道の人気喫茶店のコーヒー豆を使用したドリップバッグとマグカップのセット。<br />香り高い深煎りの豆は、カフェオレにするのも◎<br />カンタンに楽しめるドリップバッグは、<br />オフィスや在宅ワーク時、忙しい家事の合間など<br />日常のさまざまなシーンで大活躍。
+          </p>
+          <div class="prizes-modal__button">
+            <button class="button -medium js-prizes-modal-button">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </dialog>
+      <!-- 特典5 -->
+      <dialog class="prizes-modal js-prizes-modal">
+        <div class="prizes-modal__container">
+          <div class="prizes-modal__image">
+            <img src="./img/prizes/prizes-modal-image-05.jpg" alt="" />
+          </div>
+          <p class="prizes-modal__title">工房尾道帆布オリジナルトート</p>
+          <p class="prizes-modal__text">
+            工房尾道帆布とコラボした、<br />本キャンペーンオリジナルトート。<br />シンプルなデザインで、シーンを選ばず<br />お使いいただけます。<br />しっかりした生地で、<br />年月とともに変化していく風合いも魅力。
+          </p>
+          <div class="prizes-modal__button">
+            <button class="button -medium js-prizes-modal-button">
+              閉じる
+            </button>
+          </div>
         </div>
       </dialog>
 

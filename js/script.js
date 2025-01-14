@@ -36,19 +36,31 @@ const swiper = new Swiper(".swiper", {
 });
 
 // モーダルを開く
-$(".prizes__button").on("click", function (e) {
+$(".js-prizes-box").on("click", function (e) {
   e.preventDefault();
 
-  $("#js-prizes-modal")[0].showModal();
+  const idx = $(this).index();
+  const dialog = $(".prizes-modal").eq(idx)[0];
+  dialog.showModal();
+  dialog.scrollTop = 0;
   $("body").toggleClass("is-fixed");
-
-  // 後ろの要素が選択できない
-  // $("#js-about-modal")[0].show();
 });
 
 // モーダルを閉じる
-$(".js-modal-close").on("click", function (e) {
+$(".js-prizes-modal-button").on("click", function (e) {
   e.preventDefault();
 
-  $("#js-about-modal")[0].close();
+  const dialog = $(this).parent().parent().parent();
+  $(dialog)[0].close();
+  $("body").toggleClass("is-fixed");
+});
+
+// モーダルの外側クリック時にモーダルを閉じる
+$(".js-prizes-modal").on("click", function (e) {
+  e.preventDefault();
+
+  if ($(e.target).hasClass("js-prizes-modal")) {
+    $(this)[0].close();
+    $("body").toggleClass("is-fixed");
+  }
 });
