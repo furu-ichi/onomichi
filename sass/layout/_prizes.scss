@@ -3,7 +3,6 @@
 
 .prizes {
   padding-top: 37.67px;
-  padding-bottom: 500px;
   overflow: hidden;
 
   @include breakpoints.mq("md") {
@@ -452,5 +451,23 @@
 
   @include breakpoints.mq("md") {
     margin-top: 24px;
+  }
+}
+
+.prizes__image-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: -44px;
+  overflow: hidden;
+  @include breakpoints.mq("md") {
+    margin-top: 0;
+    width: 100%;
+  }
+  img {
+    display: block;
+    min-width: 580px;
+    @include breakpoints.mq("md") {
+      width: 100%;
+    }
   }
 }

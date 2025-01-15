@@ -1461,7 +1461,6 @@ body.is-fixed {
 
 .prizes {
   padding-top: 37.67px;
-  padding-bottom: 500px;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
@@ -1934,6 +1933,219 @@ body.is-fixed {
 @media screen and (min-width: 768px) {
   .prizes-modal__button {
     margin-top: 24px;
+  }
+}
+
+.prizes__image-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -44px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .prizes__image-bottom {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+.prizes__image-bottom img {
+  display: block;
+  min-width: 580px;
+}
+@media screen and (min-width: 768px) {
+  .prizes__image-bottom img {
+    width: 100%;
+  }
+}
+
+.spots {
+  position: relative;
+  background: #67b0c7;
+  padding-bottom: 20px;
+}
+
+.spots__content-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+
+.spots__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 8px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.spots__heading-icon img {
+  width: 28px;
+  height: 28px;
+}
+
+.spots__heading-text {
+  color: #ffffff;
+  -webkit-font-feature-settings: "pwid" on;
+          font-feature-settings: "pwid" on;
+  font-family: "Kiwi Maru", serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.25; /* 35px */
+}
+
+.spots__slide {
+  width: 240px;
+  height: 402px;
+}
+
+.spots-card {
+  border-radius: 12px;
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.spots-card__image img {
+  width: 100%;
+}
+
+.spots-card__texts {
+  padding-inline: 24px;
+}
+
+.spots-card__title {
+  margin-top: 16px;
+  text-align: center;
+  color: #4a3636;
+  -webkit-font-feature-settings: "pref" on;
+          font-feature-settings: "pref" on;
+  font-family: "Noto Sans JP", serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.spots-card__description {
+  margin-top: 16px;
+  text-align: center;
+  color: #4a3636;
+  font-family: "Noto Sans JP", serif;
+  font-size: 12px;
+}
+
+.spots__prev-button,
+.spots__next-button {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .spots__prev-button,
+  .spots__next-button {
+    display: block;
+  }
+}
+
+.spots__content-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.spots__logo {
+  text-align: center;
+}
+.spots__logo img {
+  width: 255px;
+}
+
+.spots__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+
+.spots__footer-text {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Noto Sans JP", serif;
+  font-size: 11.444px;
+}
+
+.spots__footer-button {
+  text-align: center;
+}
+
+.spots__top-wave,
+.spots__bottom-wave {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+}
+.spots__top-wave img,
+.spots__bottom-wave img {
+  width: 96px;
+  height: 46px;
+  margin-right: -1px;
+}
+
+.spots__top-wave {
+  top: 1px;
+  -webkit-transform: translateY(-100%) translateX(-50%);
+          transform: translateY(-100%) translateX(-50%);
+}
+
+.spots__bottom-wave {
+  bottom: 1px;
+  -webkit-transform: translateY(100%) translateX(-50%);
+          transform: translateY(100%) translateX(-50%);
+}
+.spots__bottom-wave img {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.spots__pawpads {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .spots__pawpads {
+    display: block;
   }
 }
 

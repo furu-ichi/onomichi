@@ -17,7 +17,7 @@ $(".drawer__nav").on("click", function (e) {
 });
 
 // About スライダー
-const swiper = new Swiper(".swiper", {
+const aboutSwiper = new Swiper("#js-about-swiper", {
   // Optional parameters
   loop: true,
   autoplay: {
@@ -63,4 +63,31 @@ $(".js-prizes-modal").on("click", function (e) {
     $(this)[0].close();
     $("body").toggleClass("is-fixed");
   }
+});
+
+// Spots スライダー
+const spotsSwiper = new Swiper("#js-spots-swiper", {
+  // Optional parameters
+  loop: true,
+  slidesPerView: "auto", // 画面幅に合わせて枚数を自動調整
+  spaceBetween: 16, // スライド間の空白
+  centeredSlides: true,
+
+  breakpoints: {
+    500: {
+      spaceBetween: 30, // スライド間の空白
+    },
+    600: {
+      spaceBetween: 100, // スライド間の空白
+    },
+    600: {
+      spaceBetween: 120, // スライド間の空白
+    },
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
