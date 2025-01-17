@@ -5,6 +5,9 @@
   position: relative;
   background: var.$color-sub-d-blue;
   padding-bottom: 20px;
+  @include breakpoints.mq("md") {
+    padding-bottom: 5px;
+  }
 }
 
 .spots__inner {
@@ -15,6 +18,14 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @include breakpoints.mq("md") {
+    flex-direction: row;
+    // gap: 32px;
+    gap: 38px;
+    justify-content: flex-start;
+    align-items: start;
+  }
 }
 
 .spots__heading {
@@ -23,12 +34,27 @@
   gap: 8px;
   justify-content: center;
   align-items: center;
+
+  @include breakpoints.mq("md") {
+    position: relative;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: clamp(
+      3.75rem,
+      -8.121rem + 24.73vw,
+      15.25rem
+    ); // 最小60px、最大244px（画面幅768px～1512px）
+  }
 }
 
 .spots__heading-icon {
   img {
     width: 28px;
     height: 28px;
+    @include breakpoints.mq("md") {
+      width: 56px;
+      height: 56px;
+    }
   }
 }
 
@@ -39,9 +65,48 @@
   font-size: 28px;
   font-weight: 500;
   line-height: 1.25; /* 35px */
+  @include breakpoints.mq("md") {
+    writing-mode: vertical-rl;
+    font-size: 40px;
+    line-height: 1.25; /* 35px */
+    letter-spacing: 0.26em;
+  }
+}
+
+.spots__pawpads {
+  display: none;
+  @include breakpoints.mq("xl") {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    // right: 102px;
+    right: clamp(
+      6.375rem,
+      -7.087rem + 17.95vw,
+      9.875rem
+    ); // 最小102px、最大158px（画面幅1200px～1512px）
+    bottom: -22px;
+    transform: translateY(100%);
+
+    img {
+      width: 100px;
+      height: 220px;
+    }
+  }
 }
 
 .spots__slider {
+  @include breakpoints.mq("md") {
+    position: relative;
+    overflow: hidden; // 横に長くなるSwiperの見切れ部分を表示させない
+    flex-grow: 1;
+
+    // ナビゲーションボタン表示用の領域作り
+    padding-left: 50px;
+    margin-left: -50px;
+    padding-bottom: 38px;
+    margin-bottom: -38px;
+  }
 }
 
 .spots__swiper {
@@ -53,6 +118,10 @@
 .spots__slide {
   width: 240px;
   height: 402px;
+  @include breakpoints.mq("md") {
+    width: 344px;
+    height: 542px;
+  }
 }
 
 .spots-card {
@@ -61,6 +130,9 @@
   width: 100%;
   height: 100%;
   overflow: hidden; // 画像の角がはみだすのを防ぐ
+  @include breakpoints.mq("md") {
+    border-radius: 24px;
+  }
 }
 
 .spots-card__image {
@@ -71,6 +143,9 @@
 
 .spots-card__texts {
   padding-inline: 24px;
+  @include breakpoints.mq("md") {
+    padding-inline: 32px;
+  }
 }
 
 .spots-card__title {
@@ -81,38 +156,77 @@
   font-family: var.$font-family-ja-noto;
   font-size: 16px;
   font-weight: 700;
+  @include breakpoints.mq("md") {
+    margin-top: 24px;
+    font-size: 20px;
+  }
 }
 
 .spots-card__description {
   margin-top: 16px;
-  text-align: center;
+  text-align: left;
   color: var.$color-mono-brown;
   font-family: var.$font-family-ja-noto;
   font-size: 12px;
+  @include breakpoints.mq("md") {
+    margin-top: 24px;
+    font-size: 16px;
+  }
 }
 
 .spots__prev-button,
 .spots__next-button {
   display: none;
   @include breakpoints.mq("md") {
+    margin-top: 196px;
     display: block;
+    width: 80px;
+    height: 80px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 .spots__prev-button {
+  background: url(../../img/spots/spots-swiper-button.png) no-repeat center
+    center / contain;
+  left: 0;
 }
 .spots__next-button {
+  background: url(../../img/spots/spots-swiper-button.png) no-repeat center
+    center / contain;
+  transform: scale(-1, 1);
+  right: clamp(
+    6.875rem,
+    -4.351rem + 23.39vw,
+    17.75rem
+  ); // 最小110px、最大284px（画面幅768px～1512px）
 }
 
 .spots__content-2 {
+  // position: relative;
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @include breakpoints.mq("md") {
+    margin-top: 64px;
+    flex-direction: row;
+    gap: 81px;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .spots__logo {
   text-align: center;
   img {
     width: 255px;
+    @include breakpoints.mq("md") {
+      width: 495px;
+    }
   }
 }
 
@@ -120,6 +234,10 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  @include breakpoints.mq("md") {
+    align-items: end;
+    gap: 27px;
+  }
 }
 
 .spots__footer-text {
@@ -127,6 +245,10 @@
   text-align: center;
   font-family: var.$font-family-ja-noto;
   font-size: 11.444px;
+
+  @include breakpoints.mq("md") {
+    font-size: 16px;
+  }
 }
 
 .spots__footer-button {
@@ -142,27 +264,29 @@
   display: flex;
   flex-direction: row;
   gap: 0;
-  img {
-    width: 96px;
-    height: 46px;
-    margin-right: -1px;
-  }
 }
 .spots__top-wave {
   top: 1px;
   transform: translateY(-100%) translateX(-50%);
 }
 .spots__bottom-wave {
+  z-index: -1;
   bottom: 1px;
   transform: translateY(100%) translateX(-50%);
-  img {
+  .spots__wave-img {
     transform: scale(1, -1);
   }
 }
-
-.spots__pawpads {
-  display: none;
+.spots__wave-img {
+  flex-shrink: 0;
+  background: url(../../img/spots/spots-wave.png) no-repeat center center /
+    contain;
+  width: 96px;
+  height: 46px;
+  margin-right: -1px;
   @include breakpoints.mq("md") {
-    display: block;
+    background-image: url(../../img/spots/pc/spots-wave.png);
+    width: 252px;
+    height: 120px;
   }
 }

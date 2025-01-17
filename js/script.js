@@ -83,11 +83,16 @@ const spotsSwiper = new Swiper("#js-spots-swiper", {
     600: {
       spaceBetween: 120, // スライド間の空白
     },
+    768: {
+      spaceBetween: 32, // スライド間の空白
+      centeredSlides: false,
+      initialSlide: 5,
+    },
   },
 
   // Navigation arrows
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: "#js-spots-next",
+    prevEl: "#js-spots-prev",
   },
 });
