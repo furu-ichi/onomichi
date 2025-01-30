@@ -3,4 +3,131 @@
 
 .qa {
   padding-top: 87px;
+  padding-bottom: 500px; // TODO 最後に消す
+}
+
+.qa__inner {
+}
+
+.qa__heading {
+}
+
+.qa__boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.qa__box {
+  border-radius: 12px;
+  border: 2px solid var.$color-mono-brown;
+  background: var.$color-mono-white;
+  overflow: hidden; // 子要素（Answer）の背景色グレーがはみださないように
+
+  // 最初のQ&Aを開いた状態にしておく
+  &:first-child {
+    .qa__body {
+      display: block;
+    }
+  }
+
+  &.is-open {
+    .qa-question {
+      .qa-question__open-icon {
+        .qa-question__open-icon-bar {
+          &:nth-child(1) {
+            display: none;
+          }
+          &:nth-child(2) {
+            transform: translateX(-50%) translateY(-50%) rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+.qa__question {
+}
+
+.qa-question {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: calc(12px - 2px) calc(16px - 2px);
+  align-items: center;
+}
+
+.qa-question__icon,
+.qa-answer__icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var.$color-main;
+  font-family: var.$font-family-en-josefin;
+  font-size: 24px;
+  line-height: 1.25; /* 30px */
+}
+
+.qa-question__text,
+.qa-answer__text {
+  color: var.$color-mono-brown;
+  font-family: var.$font-family-ja-noto;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  span {
+    text-decoration-line: underline;
+  }
+}
+.qa-answer__text {
+  font-weight: 400;
+}
+
+.qa-question__open-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 26.182px;
+  height: 26.182px;
+  background-color: var.$color-main;
+  border-radius: 50%;
+}
+
+.qa-question__open-icon-bar {
+  position: absolute;
+  background-color: var.$color-mono-white;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  transition: transform 0.3s;
+
+  // 横線
+  &:nth-child(1) {
+    width: 10px;
+    height: 1.5px;
+  }
+  // 縦線
+  &:nth-child(2) {
+    width: 1.5px;
+    height: 10px;
+  }
+}
+
+.qa__body {
+  // Q&Aの初期状態は非表示
+  display: none;
+}
+
+.qa__answer {
+}
+
+.qa-answer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 16px calc(16px - 2px) calc(16px - 2px); // ボーダー分をひく
+  align-items: center;
+  background: var.$color-mono-gray;
 }

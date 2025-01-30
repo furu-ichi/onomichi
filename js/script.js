@@ -96,3 +96,16 @@ const spotsSwiper = new Swiper("#js-spots-swiper", {
     prevEl: "#js-spots-prev",
   },
 });
+
+// Q＆A開閉
+$(".js-qa-question").on("click", function (e) {
+  e.preventDefault();
+
+  if ($(this).parent().hasClass("is-open")) {
+    $(this).parent().removeClass("is-open");
+    $(this).next().slideToggle();
+  } else {
+    $(this).parent().addClass("is-open");
+    $(this).next().slideToggle();
+  }
+});
