@@ -3,7 +3,12 @@
 
 .qa {
   padding-top: 87px;
-  padding-bottom: 500px; // TODO 最後に消す
+  // padding-bottom: 60px;
+  padding-bottom: 500px;
+
+  @include breakpoints.mq("md") {
+    padding-top: 239px;
+  }
 }
 
 .qa__inner {
@@ -17,6 +22,14 @@
   flex-direction: column;
   gap: 12px;
   margin-top: 24px;
+
+  @include breakpoints.mq("md") {
+    max-width: 1024px;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 24px;
+  }
 }
 
 .qa__box {
@@ -24,6 +37,10 @@
   border: 2px solid var.$color-mono-brown;
   background: var.$color-mono-white;
   overflow: hidden; // 子要素（Answer）の背景色グレーがはみださないように
+
+  @include breakpoints.mq("md") {
+    border-radius: 16px;
+  }
 
   // 最初のQ&Aを開いた状態にしておく
   &:first-child {
@@ -57,10 +74,19 @@
   gap: 12px;
   padding: calc(12px - 2px) calc(16px - 2px);
   align-items: center;
+  width: 100%;
+
+  @include breakpoints.mq("md") {
+    padding-top: calc(22.5px - 2px);
+    padding-inline: calc(24px - 2px);
+    padding-bottom: calc(21.5px - 2px);
+    gap: 16px;
+  }
 }
 
 .qa-question__icon,
 .qa-answer__icon {
+  flex-shrink: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -68,10 +94,15 @@
   font-family: var.$font-family-en-josefin;
   font-size: 24px;
   line-height: 1.25; /* 30px */
+
+  @include breakpoints.mq("md") {
+    font-size: 32px;
+  }
 }
 
 .qa-question__text,
 .qa-answer__text {
+  flex-grow: 1;
   color: var.$color-mono-brown;
   font-family: var.$font-family-ja-noto;
   font-size: 14px;
@@ -80,9 +111,16 @@
   span {
     text-decoration-line: underline;
   }
+
+  @include breakpoints.mq("md") {
+    font-size: 20px;
+  }
 }
 .qa-answer__text {
   font-weight: 400;
+  @include breakpoints.mq("md") {
+    font-size: 16px;
+  }
 }
 
 .qa-question__open-icon {
@@ -92,6 +130,11 @@
   height: 26.182px;
   background-color: var.$color-main;
   border-radius: 50%;
+
+  @include breakpoints.mq("md") {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .qa-question__open-icon-bar {
@@ -107,11 +150,19 @@
   &:nth-child(1) {
     width: 10px;
     height: 1.5px;
+    @include breakpoints.mq("md") {
+      width: 18.5px;
+      height: 2.5px;
+    }
   }
   // 縦線
   &:nth-child(2) {
     width: 1.5px;
     height: 10px;
+    @include breakpoints.mq("md") {
+      width: 2.5px;
+      height: 18.5px;
+    }
   }
 }
 
@@ -130,4 +181,10 @@
   padding: 16px calc(16px - 2px) calc(16px - 2px); // ボーダー分をひく
   align-items: center;
   background: var.$color-mono-gray;
+
+  @include breakpoints.mq("md") {
+    padding-top: calc(28px - 2px);
+    padding-inline: calc(24px - 2px);
+    padding-bottom: calc(24px - 2px);
+  }
 }
