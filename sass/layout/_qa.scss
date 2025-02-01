@@ -3,8 +3,7 @@
 
 .qa {
   padding-top: 87px;
-  // padding-bottom: 60px;
-  padding-bottom: 500px;
+  padding-bottom: 15px;
 
   @include breakpoints.mq("md") {
     padding-top: 239px;

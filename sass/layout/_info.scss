@@ -1,0 +1,92 @@
+@use "../foundation/variable" as var;
+@use "../foundation/breakpoints";
+
+.info {
+  padding-top: 15px;
+  padding-bottom: 500px; // TODO 最後に消す
+}
+
+.info__inner {
+}
+
+.info__box {
+  border: 8px solid var.$color-mono-white;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.info__heading {
+  padding-top: calc(24px - 8px);
+}
+
+.info__list {
+  padding-top: 24px;
+  padding-inline: calc(23.5px - 8px);
+  padding-bottom: calc(40px - 8px);
+}
+
+.info__item {
+}
+
+.info-item {
+}
+
+.info-item + .info-item {
+  margin-top: 14px;
+  border-top: 1px solid var.$color-mono-d-gray;
+  padding-top: 12px;
+}
+
+.info-item__title {
+  position: relative;
+  padding-left: 16px; // 約物分のスペースを空ける
+  color: var.$color-mono-brown;
+  font-family: var.$font-family-ja-noto;
+  font-size: 14px;
+  font-weight: 700;
+
+  // 約物
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-color: var.$color-main;
+    border-radius: 50%;
+  }
+}
+
+.info-item__body {
+  margin-top: 8px;
+}
+
+.info-item__body-text {
+  color: var.$color-mono-brown;
+  font-family: var.$font-family-ja-noto;
+  font-size: 12px;
+  line-height: 1.587; // ピクセルパーフェクトの為
+}
+
+.info-item__list {
+}
+
+.info-item__list-item {
+  position: relative;
+  padding-left: 18px;
+
+  p {
+    // 約物
+    &::before {
+      position: absolute;
+      content: "";
+      width: 3px;
+      height: 3px;
+      background-color: var.$color-mono-brown;
+      border-radius: 50%;
+      top: 0.758em; // 1行目の上下中央に表示させる為
+      left: 7px;
+    }
+  }
+}
