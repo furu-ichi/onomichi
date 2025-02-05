@@ -2319,6 +2319,7 @@ body.is-fixed {
 @media screen and (min-width: 768px) {
   .qa {
     padding-top: 239px;
+    padding-bottom: 60px;
   }
 }
 
@@ -2526,14 +2527,30 @@ body.is-fixed {
   padding-top: 15px;
   padding-bottom: 500px;
 }
+@media screen and (min-width: 768px) {
+  .info {
+    padding-top: 60px;
+  }
+}
 
 .info__box {
   border: 8px solid #ffffff;
   background: rgba(255, 255, 255, 0.5);
 }
+@media screen and (min-width: 768px) {
+  .info__box {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
 
 .info__heading {
   padding-top: 16px;
+}
+@media screen and (min-width: 768px) {
+  .info__heading {
+    padding-top: 32px;
+  }
 }
 
 .info__list {
@@ -2541,11 +2558,39 @@ body.is-fixed {
   padding-inline: 15.5px;
   padding-bottom: 32px;
 }
+@media screen and (min-width: 768px) {
+  .info__list {
+    padding-top: 40px;
+    padding-inline: 48px;
+    padding-bottom: 44px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .info-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
 
 .info-item + .info-item {
   margin-top: 14px;
   border-top: 1px solid #cccccc;
   padding-top: 12px;
+}
+@media screen and (min-width: 768px) {
+  .info-item + .info-item {
+    margin-top: 12px;
+    padding-top: 11px;
+  }
 }
 
 .info-item__title {
@@ -2555,6 +2600,18 @@ body.is-fixed {
   font-family: "Noto Sans JP", serif;
   font-size: 14px;
   font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .info-item__title {
+    min-width: 160px;
+    padding-left: 32px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .info-item__title {
+    min-width: 240px;
+  }
 }
 .info-item__title::before {
   content: "";
@@ -2568,9 +2625,19 @@ body.is-fixed {
   background-color: #9ed0e0;
   border-radius: 50%;
 }
+@media screen and (min-width: 768px) {
+  .info-item__title::before {
+    left: 16px;
+  }
+}
 
 .info-item__body {
   margin-top: 8px;
+}
+@media screen and (min-width: 768px) {
+  .info-item__body {
+    margin-top: 0;
+  }
 }
 
 .info-item__body-text {
@@ -2579,10 +2646,21 @@ body.is-fixed {
   font-size: 12px;
   line-height: 1.587;
 }
+@media screen and (min-width: 768px) {
+  .info-item__body-text {
+    font-size: 16px;
+    line-height: 1.625;
+  }
+}
 
 .info-item__list-item {
   position: relative;
   padding-left: 18px;
+}
+@media screen and (min-width: 768px) {
+  .info-item__list-item {
+    padding-left: 24px;
+  }
 }
 .info-item__list-item p::before {
   position: absolute;
@@ -2593,6 +2671,14 @@ body.is-fixed {
   border-radius: 50%;
   top: 0.758em;
   left: 7px;
+}
+@media screen and (min-width: 768px) {
+  .info-item__list-item p::before {
+    width: 4px;
+    height: 4px;
+    top: 0.8em;
+    left: 10px;
+  }
 }
 
 .button {
@@ -2636,37 +2722,22 @@ body.is-fixed {
   background: #ffee56;
 }
 
+/* 疑似要素バージョン */
+/* border-bottomバージョン */
+/* text-decorationバージョン */
 .link {
-  position: relative;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
+  text-decoration: underline;
+  text-decoration-color: transparent; /* 初期状態は透明 */
+  text-decoration-thickness: 1px; /* 初期の下線の太さ */
+  -webkit-transition: color 0.3s, text-decoration-color 0.3s;
+  transition: color 0.3s, text-decoration-color 0.3s;
 }
-.link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #67b0c7;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+.link.-underline {
+  text-decoration-color: #4a3636;
 }
 .link:hover {
   color: #67b0c7;
-}
-.link:hover::after {
-  opacity: 1;
-}
-.link.-underline::after {
-  background-color: #4a3636;
-  opacity: 1;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-.link.-underline:hover::after {
-  background-color: #67b0c7;
+  text-decoration-color: #67b0c7;
 }
 
 .heading {
